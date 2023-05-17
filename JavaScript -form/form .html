@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="styles.css">
+
+
+  <title>Formation Form</title>
+</head>
+
+<body>
+
+  <form id="myForm"> <!-- This is an HTML element that creates a form -->
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <button type="submit">Submit</button>
+  </form>
+  <script>
+    // This is JavaScript code that adds interactivity to the web page
+    var form = document.getElementById("myForm");
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      alert("Thank you, " + name + ". Your email is " + email + "."); // This displays a pop-up message to the user with their name and email
+    });
+  </script>
+
+</body>
+
+</html>
